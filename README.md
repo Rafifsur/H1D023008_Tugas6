@@ -1,4 +1,4 @@
-# H1D023008
+# H1D023008 TUGAS 6
 
 
 ## Penjelasan: Passing Data dari Form ke Tampilan
@@ -44,14 +44,5 @@ class TampilData extends StatelessWidget {
 
 Dengan pendekatan ini data dikirim langsung melalui konstruktor widget tujuan. Ini cocok untuk kasus sederhana. Untuk kebutuhan yang lebih kompleks (state global, sinkronisasi, persistensi) bisa dipertimbangkan teknik lain seperti Provider, Riverpod, atau Bloc.
 
-## Struktur berkas (ringkasan)
-
-lib/
-	main.dart         # entry point — sekarang membuka FormData
-	ui/
-		form_data.dart  # form input Nama, NIM, Tahun Lahir
-		tampil_data.dart # menampilkan data yang dikirim dari form
-
----
 
 
