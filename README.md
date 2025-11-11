@@ -1,0 +1,71 @@
+# prak
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+
+## Penjelasan: Passing Data dari Form ke Tampilan
+
+Pada tugas ini kita menambahkan dua file UI di `lib/ui`:
+
+- `form_data.dart` — berisi form input (Nama, NIM, Tahun Lahir). Setelah user menekan tombol, aplikasi akan menavigasi ke layar hasil dan mengirim data yang diisi.
+- `tampil_data.dart` — menerima data melalui konstruktor dan menampilkan hasil input.
+
+Prinsip passing datanya sederhana dan umum di Flutter:
+
+1. Ambil data dari `TextEditingController` setelah validasi form.
+2. Panggil `Navigator.push` lalu buat instance layar tujuan dengan memasukkan data sebagai parameter konstruktor.
+
+Contoh kode (dari `form_data.dart`):
+
+```dart
+Navigator.push(
+	context,
+	MaterialPageRoute(
+		builder: (context) => TampilData(
+			nama: nama,
+			nim: nim,
+			tahunLahir: tahun,
+		),
+	),
+);
+```
+
+Di `tampil_data.dart`, kita membuat widget dengan konstruktor yang menerima data:
+
+```dart
+class TampilData extends StatelessWidget {
+	final String nama;
+	final String nim;
+	final String tahunLahir;
+
+	const TampilData({Key? key, required this.nama, required this.nim, required this.tahunLahir}) : super(key: key);
+
+	// build() menampilkan data
+}
+```
+
+Dengan pendekatan ini data dikirim langsung melalui konstruktor widget tujuan. Ini cocok untuk kasus sederhana. Untuk kebutuhan yang lebih kompleks (state global, sinkronisasi, persistensi) bisa dipertimbangkan teknik lain seperti Provider, Riverpod, atau Bloc.
+
+## Struktur berkas (ringkasan)
+
+lib/
+	main.dart         # entry point — sekarang membuka FormData
+	ui/
+		form_data.dart  # form input Nama, NIM, Tahun Lahir
+		tampil_data.dart # menampilkan data yang dikirim dari form
+
+---
+
+Jika ingin saya juga menambahkan contoh unit/widget test sederhana untuk memastikan form dan navigasi bekerja, bilang saja dan saya buatkan.
