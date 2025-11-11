@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'H1D023008_Tugas6',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // Custom cohesive theme for the app
