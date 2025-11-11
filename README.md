@@ -45,4 +45,9 @@ class TampilData extends StatelessWidget {
 Dengan pendekatan ini data dikirim langsung melalui konstruktor widget tujuan. Ini cocok untuk kasus sederhana. Untuk kebutuhan yang lebih kompleks (state global, sinkronisasi, persistensi) bisa dipertimbangkan teknik lain seperti Provider, Riverpod, atau Bloc.
 
 
+Screenshoot : 
+<img width="1216" height="1317" alt="image" src="https://github.com/user-attachments/assets/2c94b3e6-d945-4d42-8c53-35a4edcb7076" />
+<img width="1221" height="1312" alt="image" src="https://github.com/user-attachments/assets/34215db9-2565-4032-ab72-7902cc7ca933" />
+
+
 
